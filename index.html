@@ -11,23 +11,40 @@
             margin: 50px;
         }
         .container {
-            width: 50%;
+            width: 100%;
+            max-width: 800px; /* Maximum width for larger screens */
             margin: auto;
             border: 2px solid black;
             padding: 20px;
+            box-sizing: border-box;
         }
         .photo {
             margin-top: 20px;
         }
         .photo img {
-            width: 300px;
+            width: 100%; /* Makes the image responsive */
+            max-width: 300px; /* Maximum width for image */
             height: auto;
             border: 2px solid black;
         }
         .info {
             margin-top: 20px;
             text-align: left;
-            margin-left: 25%;
+            margin-left: 10%; /* Adjust left margin for larger screens */
+        }
+
+        /* Media query for smaller screens */
+        @media (max-width: 600px) {
+            .info {
+                margin-left: 0;
+                text-align: center; /* Center align text on small screens */
+            }
+            .container {
+                width: 90%; /* Makes container take 90% width on smaller screens */
+            }
+            .photo img {
+                max-width: 80%; /* Makes the image smaller on mobile */
+            }
         }
     </style>
 </head>
@@ -35,7 +52,7 @@
     <div class="container">
         <h2>Saya Azis sedang melaksanakan Ujian Tengah Semester</h2>
         <div class="info">
-            <p>Nama :  Rifky Azis Maulana Yusup</p>
+            <p>Nama : Rifky Azis Maulana Yusup</p>
             <p>NRP : 210414018</p>
             <p>Kelas : 4IF1</p>
         </div>
